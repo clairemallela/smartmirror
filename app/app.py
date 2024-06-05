@@ -11,7 +11,8 @@ app.config['UPLOAD_FOLDER'] = '../data/input_data'
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    html = ['index.html', 'photo.html', 'gender.html', 'photo.html', 'race.html', 'results.html', 'terms.html', 'thankyou.html']
+    return render_template(html)
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
