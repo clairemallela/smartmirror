@@ -5,8 +5,8 @@ from io import BytesIO
 import os
 from model.model import run_model
 
-app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = 'uploads'
+app = Flask(__name__, template_folder="./html")
+app.config['UPLOAD_FOLDER'] = '../data/input_data'
 
 @app.route('/')
 def index():
