@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Race and Ethnicity</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Hispanic, Latino, or Spanish -->
+  <div id="LatinoForm">
+    <h2>Are you of Hispanic, Latino, or Spanish Origin?</h2>
+    <p>Select all that apply:</p>
+    <form>
+      <div class="main-category">
+        <label>
+          <input type="checkbox" name="hispanic" value="No, not of Hispanic, Latino, or Spanish origin">
+          No, not of Hispanic, Latino, or Spanish origin
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+      <div class="main-category">
+        <label>
+          <input type="checkbox" name="hispanic" value="Yes, Mexican, Mexican American, or Chicano">
+          Yes, Mexican, Mexican American, or Chicano
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+      <div class="main-category">
+        <label>
+          <input type="checkbox" name="hispanic" value="Yes, Puerto Rican">
+          Yes, Puerto Rican
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+      <div class="main-category">
+        <label>
+          <input type="checkbox" name="hispanic" value="Yes, Cuban">
+          Yes, Cuban
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+      <div class="main-category">
+        <label>
+          <input type="checkbox" name="hispanic" value="Yes, another Hispanic, Latino, or Spanish origin">
+          Yes, another Hispanic, Latino, or Spanish origin
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+    </form>
+  </div>
+
+  <!-- Race -->
+  <div id="raceEthnicityPage">
+    <h2>What is your race?</h2>
+    <p>Select all that apply:</p>
+    <form>
+      <!-- White -->
+      <div class="main-category">
+        <label>
+          <input type="checkbox" id="white" name="race" value="White">
+          White
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+      <div id="whiteSubcategories" class="subcategories">
+        <label>
+          <input type="checkbox" name="whitesubcategory" value="German">
+          German
+          <span class="custom-checkbox"></span>
+        </label>
+        <label> 
+          <input type="checkbox" name="whitesubcategory" value="Irish">
+          Irish
+        <span class="custom-checkbox"></span>
+        </label>
+        <label> 
+          <input type="checkbox" name="whitesubcategory" value="English">
+         English
+        <span class="custom-checkbox"></span>
+        </label>
+        <label> 
+          <input type="checkbox" name="whitesubcategory" value="Italian">
+         Italian
+        <span class="custom-checkbox"></span>
+        </label>
+        <label> 
+          <input type="checkbox" name="whitesubcategory" value="Polish">
+          Polish
+        <span class="custom-checkbox"></span>
+        </label>
+        <label> 
+          <input type="checkbox" name="whitesubcategory" value="French">
+          French
+        <span class="custom-checkbox"></span>
+        </label>
+      </div>
+      <!-- Black or African American -->
+      <div class="main-category">
+        <label>
+          <input type="checkbox" id="black" name="race" value="Black or African American">
+          Black or African American
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+      <div id="blackSubcategories" class="subcategories">
+        <label>
+          <input type="checkbox" name="blackSubcategory" value="African American">
+          African American
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="checkbox" name="blackSubcategory" value="Jamaican">
+          Jamaican
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="checkbox" name="blackSubcategory" value="Haitian">
+          Haitian
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="checkbox" name="blackSubcategory" value="Nigerian">
+          Nigerian
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="checkbox" name="blackSubcategory" value="Ethiopian">
+          Ethiopian
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="checkbox" name="blackSubcategory" value="Somali">
+          Somali
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="text" id="africanAmericanInput" placeholder="Specify details for African American">
+        </label>
+      </div>
+      <!-- Asian -->
+      <div class="main-category">
+        <label>
+          <input type="checkbox" id="asian" name="race" value="Asian">
+          Asian
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+      <div id="asianSubcategories" class="subcategories">
+        <label>
+          <input type="checkbox" name="asianSubcategory" value="Chinese">
+          Chinese
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="checkbox" name="asianSubcategory" value="Indian">
+          Asian Indian
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="checkbox" name="asianSubcategory" value="Japanese">
+          Japanese
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="checkbox" name="asianSubcategory" value="Vietnamese">
+          Vietnamese
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="checkbox" name="asianSubcategory" value="Korean">
+          Korean
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="checkbox" name="asianSubcategory" value="Filipino">
+          Filipino
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="text" id="asianInput" placeholder="Specify details for Asian">
+        </label>
+      </div>
+      <!-- Native Hawaiian or Pacific Islander -->
+      <div class="main-category">
+        <label>
+          <input type="checkbox" id="native-hawaiian" name="race" value="Native Hawaiian or Pacific Islander">
+          Native Hawaiian or Pacific Islander
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+      <div id="hawaiianSubcategories" class="subcategories">
+        <label>
+          <input type="checkbox" name="hawaiianSubcategories" value="Native Hawaiian">
+          Native Hawaiian
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="checkbox" name="hawaiianSubcategories" value="Samoan">
+          Samoan
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="checkbox" name="hawaiianSubcategories" value="Chamorro">
+          Chamorro
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="checkbox" name="hawaiianSubcategories" value="Tongan">
+          Tongan
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="checkbox" name="hawaiianSubcategories" value="Fijian">
+          Fijian
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="checkbox" name="hawaiianSubcategories" value="Marshallese">
+          Marshallese
+          <span class="custom-checkbox"></span>
+        </label>
+        <label>
+          <input type="text" id="nativeHawaiianInput" placeholder="Specify details for Native Hawaiian or Pacific Islander">
+        </label>
+      </div>
+      <!-- Native American and Indigenous -->
+      <div class="main-category">
+        <label>
+          <input type="checkbox" id="native-american" name="race" value="Native American and Indigenous">
+          Native American and Indigenous
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+      <div id="nativeSubcategories" class="subcategories">
+        <label>
+          <input type="text" name="nativeSubcategory" value="Tribe1">
+          <!-- Tribe1 -->
+          <span class="custom-textbox"></span>
+        </label>
+        <label>
+          <input type="text" name="nativeSubcategory" value="Tribe2">
+          <!-- Tribe2 -->
+          <span class="custom-textbox"></span>
+        </label>
+        <label>
+          <input type="text" id="nativeAmericanInput" placeholder="Specify details for Native American and Indigenous">
+        </label>
+      </div>
+      <!-- Other -->
+      <div class="main-category">
+        <label>
+          <input type="checkbox" id="other" name="race" value="Other">
+          Other
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+      <div id="otherSubcategories" class="subcategories">
+        <label>
+          <input type="text" id="otherInput" placeholder="Specify details for Other">
+        </label>
+      </div>
+    </form>
+  </div>
+  <div class="button-container">
+    <button id="backButton2">Back</button>
+    <button type="submit" id="submitButton">Submit</button>
+    </div>
+  <script src="script.js" defer></script>
+</body>
+
+</html>

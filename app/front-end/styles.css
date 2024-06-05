@@ -1,0 +1,308 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #25262b;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-y: auto; /* Allow scrolling if content exceeds viewport */
+}
+#screen {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#tapToBegin,#thankYouPage h1 {
+  animation: breathe 8s infinite alternate;
+}
+
+@keyframes breathe {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#termsPage,
+#liveCam,
+#resultsPage {
+  display: none; /* Hides the elements */
+}
+
+#termsPage {
+  display: block;
+  max-width: 80%;
+  text-align: left;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 15px;
+}
+
+#termsContent {
+  max-height: 300px;
+  overflow-y: scroll;
+  padding: 15px;
+  background-color: #444;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+/* Custom scrollbar */
+#termsContent::-webkit-scrollbar {
+  width: 8px;
+}
+
+#termsContent::-webkit-scrollbar-track {
+  background: #333;
+}
+
+#termsContent::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 10px;
+  border: 2px solid #333;
+}
+
+#declineButton, #acceptButton, #yesButton, #noButton, #conButton , #backButton,#backButton2, #submitButton {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  color: #444;
+  border-radius: 15px;
+}
+
+#declineButton, #noButton, #backButton, #backButton2 {
+  background-color: #333;
+  color: #FFF;
+  border: 1px solid #FFF;
+}
+
+#restartButton, #captureButton {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  color: #444;
+  border-radius: 15px;
+}
+
+
+#LatinoForm, #raceEthnicityPage {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #444;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+form {
+  padding: 20px;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+}
+
+label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+label .custom-checkbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+label input:checked ~ .custom-checkbox {
+  background-color: #25262b;
+}
+
+label .custom-checkbox:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+label input:checked ~ .custom-checkbox:after {
+  display: block;
+}
+
+label .custom-checkbox:after {
+  left: 7px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+}
+
+.main-category {
+  border: none;
+  background-color: #333;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.subcategories {
+  display: none;
+  margin-left: 20px;
+}
+
+/* Camera */
+#video {
+    display: block;
+    margin: auto;
+    border: 2px solid black;
+    width: 320px;
+    height: 240px;
+    border-radius: 15px;
+}
+#photo {
+    border: 2px solid black;
+    width: 320px;
+    height: 240px;
+    display: block;
+    margin: auto;
+    border-radius: 15px;
+}
+#canvas {
+    display: none;
+}
+.camera {
+    width: 340px;
+    display: inline-block;
+}
+.output {
+    width: 340px;
+    padding-top: 20px;
+    display: inline-block;
+}
+#startbutton {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #444;
+  border: none;
+  color: #fff;
+  border-radius: 15px;
+}
+#continuebutton {
+  padding: 10px 20px;
+  margin: 20px auto;
+  display: block;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  color: #444;
+  border-radius: 15px;
+}
+.contentarea {
+    font-size: 16px;
+    font-family: Arial;
+    text-align: center;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* The container take full height of the viewport */
+}
+
+.camera-container {
+  position: relative;
+  display: inline-block;
+}
+
+video {
+  width: 320px;
+  height: auto; /* Maintain aspect ratio */
+}
+
+#countdownTimer {
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 48px;
+  color: #FFF;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  display: none;
+}
+
+
+canvas {
+  display: none;
+}
+
+.output img {
+  display: block;
+  margin: 20px auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+#capturedPhoto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 5px solid #FFFFFF; 
+  object-fit: cover;
+}
+ p {
+    margin: 10px 0;
+    text-align: center;
+    font-size: medium;
+}

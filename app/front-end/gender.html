@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Race and Ethnicity</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+ <!-- Gender -->
+  <div id="raceEthnicityPage">
+    <h2>What's your gender? </h2>
+    <p>Select all that apply:</p>
+    <form>
+      <!-- Male -->
+      <div class="main-category">
+        <label>
+          <input type="checkbox" id="Male" name="gender" value="Male">
+          Male
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+
+      <!-- Female -->
+      <div class="main-category">
+        <label>
+          <input type="checkbox" id="female" name="gender" value="Female">
+          Female
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+    
+      <!-- Non-Binary -->
+      <div class="main-category">
+        <label>
+          <input type="checkbox" id="non-Binary" name="gender" value="Asian">
+          Non-Binary
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+      <!-- Transgender-->
+      <div class="main-category">
+        <label>
+          <input type="checkbox" id="transgender" name="gender" value="Transgender">
+          Transgender
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+
+      <!-- Other -->
+      <div class="main-category">
+        <label>
+          <input type="checkbox" id="other" name="gender" value="Other">
+          Prefer not to answer 
+          <span class="custom-checkbox"></span>
+        </label>
+      </div>
+    </form>
+  </div>
+  <div class="button-container">
+  <button type="submit" id="backButton">Back</button>
+  <button type="submit" id="conButton">Continue</button>
+  </div>
+  <script src="script.js" defer></script>
+</body>
+
+</html>
