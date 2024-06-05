@@ -10,9 +10,9 @@ The smartmirror developed by the Ujima S&P Lab at University of California, San 
 
 ## Admin Instructions
 1. Connect the monitor & Raspberry Pi to your power sources.
-2. Navigate to the ``smart_mirror`` folder.
-4. Run the virtual environment by typing ``smart_mirror/bin/activate``.
-3. Navigate to the ``Smart_Mirror_Code`` folder.
-5. Run the algorithm by typing the command ``python racedetection_lite.py``.
+2. Run the virtual environment by typing ``source smart_mirror/bin/activate``.
+3. Navigate to the ``smartmirror`` folder.
+4. Navigate to the ``app`` folder within ``smartmirror``.
+5. Run the app by typing ``python app.py``. 
 
 ## User Instructions
