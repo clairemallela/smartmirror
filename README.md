@@ -47,6 +47,6 @@ The smartmirror developed by the Ujima S&P Lab at University of California, San 
 * The current model can be found on the Raspberry Pi. Follow steps 1-3 in **Admin Instructions**, then navigate to the ``Smart_Mirror_Code_`` folder. The folder named ``face-detection-tflite`` should contain the model that needs to be transferred to ``model.py``. Inside the ``face-detection-tflite`` folder is the ``fdlite_deepfaceLite_singleInstance.py`` model. Running that (``python fdlite_deepfaceLite_singleInstance.py``) should run the model from its current location.
 * For quick navigation, type ``cd /home/ujimasp/Smart_Mirror_code/face-detection-tflite/`` after steps 1-3 in **Admin Instructions**.
 
-  - [ ] Find a way to save the images / photos taken from the model in the image data folder.
+- [ ] Find a way to save the images / photos taken from the model in the image data folder.
  
-  - [ ] Link the smartmirror repository to the Raspberry Pi.
+- [ ] Link the smartmirror repository to the Raspberry Pi.
