@@ -3,10 +3,11 @@ import base64
 from PIL import Image
 from io import BytesIO
 import os
-from model.model import run_model
+from model.model import Model
 
 app = Flask(__name__, template_folder="./html")
-app.config['UPLOAD_FOLDER'] = '../data/input_data'
+app.config['UPLOAD_FOLDER'] = 'data/input_data'
+model = Model()
 
 @app.route('/')
 def index():
@@ -23,8 +24,8 @@ def upload_file():
     
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], 'captured_image.png')
     image.save(filepath)
-
-    result = run_model(filepath)  # Run your model on the image
+    print("HELLOOOOOOOO", filepath)
+    result = model.run_model(filepath)  # Run your model on the image
     return result  # Return the result
 
 if __name__ == '__main__':
