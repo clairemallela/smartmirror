@@ -1,18 +1,45 @@
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template
 import base64
 from PIL import Image
 from io import BytesIO
 import os
-from model.model import run_model
+from model.model import Model
 
-# app = Flask(__name__, template_folder="./html")
 app = Flask(__name__, template_folder="./front-end")
-app.config['UPLOAD_FOLDER'] = '../data/input_data'
+app.config['UPLOAD_FOLDER'] = 'data/input_data'
+model = Model() # Initializing model
 
 @app.route('/')
 def index():
-    html = ['index.html', 'photo.html', 'gender.html', 'photo.html', 'race.html', 'results.html', 'terms.html', 'thankyou.html']
-    return render_template(html)
+    return render_template('index.html')
+
+@app.route('/terms.html')
+def term():
+    return render_template('terms.html')
+
+@app.route('/photo.html')
+def photo():
+    return render_template('photo.html')
+
+@app.route('/results.html')
+def result():
+    return render_template('results.html')
+
+@app.route('/gender.html')
+def gender():
+    return render_template('gender.html')
+
+@app.route('/race.html')
+def race():
+    return render_template('race.html')
+
+@app.route('/thankyou.html')
+def thankyou():
+    return render_template('thankyou.html')
+
+@app.route('/index.html')
+def restart():
+    return render_template('index.html')
 
 @app.route('/upload', methods=['POST'])
 def upload_file():
@@ -26,7 +53,8 @@ def upload_file():
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], 'captured_image.png')
     image.save(filepath)
 
-    result = run_model(filepath)  # Run your model on the image
+    result = model.run_model(filepath)  # Run your model on the image
+    print(result)
     return result  # Return the result
 
 if __name__ == '__main__':
