@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Results</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <div class="contentarea">
         <img id="capturedPhoto" alt="Captured Photo">
         <h1>Your Results</p>
-        <p>Race : Black</p>
-        <p>Gender: Male</p>
-        <p>Age: 24</h2>
+        <p id="resultRace">Race: Unknown</p>
+        <!-- <p>Gender: Male</p> -->
+        <!-- <p>Age: 24</h2> -->
         <h3>Are your results accurate?</h3>
         <div class="button-container">
             <button id="yesButton">Yes</button>
@@ -21,14 +21,33 @@
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', (event) => {
-            var capturedPhoto = sessionStorage.getItem('capturedPhoto');
-            if (capturedPhoto) {
-                document.getElementById('capturedPhoto').setAttribute('src', capturedPhoto);
+        // document.addEventListener('DOMContentLoaded', (event) => {
+        //     var capturedPhoto = sessionStorage.getItem('capturedPhoto');
+        //     if (capturedPhoto) {
+        //         document.getElementById('capturedPhoto').setAttribute('src', capturedPhoto);
+        //     }
+        // });
+        document.addEventListener('DOMContentLoaded', function() {
+            var result = sessionStorage.getItem('uploadResult');
+            var photoDataUrl = sessionStorage.getItem('capturedPhoto');
+            console.log("Result:" + result)
+            if (result) {
+                try {
+                    var parsedResult = JSON.parse(result);
+                    document.getElementById('resultRace').innerText = 'Race: ' + (parsedResult.result || 'Unknown');
+                    // document.getElementById('resultGender').innerText = 'Gender: ' + (parsedResult.gender || 'Unknown');
+                    // document.getElementById('resultAge').innerText = 'Age: ' + (parsedResult.age || 'Unknown');
+                } catch (e) {
+                    console.error('Error parsing result:', e);
+                }
+            }
+
+            if (photoDataUrl) {
+                document.getElementById('capturedPhoto').setAttribute('src', photoDataUrl);
             }
         });
     </script>
-    <script src="script.js" defer></script>
+    <script src="{{ url_for('static', filename='script/script.js') }}" defer></script>
 </body>
 </html>
 

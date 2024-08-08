@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Smartmirror</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
     <div id="screen">
@@ -12,6 +12,6 @@
             <h1>Tap Here To Begin</h1>
         </div>
     </div>
-    <script src="script.js" defer></script>
+    <script src="{{ url_for('static', filename='script/script.js') }}" defer></script>
 </body>
 </html>
