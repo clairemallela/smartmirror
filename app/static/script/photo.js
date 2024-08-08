@@ -21,6 +21,8 @@
         countdownTimer = document.getElementById('countdownTimer');
         console.log("Attempting to upload image...");
 
+        console.log("Attempting to upload image...");
+
 
         navigator.mediaDevices.getUserMedia({
                 video: true,
@@ -102,9 +104,10 @@
 
     function continueToResults() {
         console.log("Uploading Images")
+        console.log("Uploading Images")
         var dataUrl = canvas.toDataURL('image/png');
         sessionStorage.setItem('capturedPhoto', dataUrl);
-        console.log("Image:", dataUrl);
+        // console.log("Image:", dataUrl);
     
         // Upload the captured image
         fetch('/upload', {
@@ -126,10 +129,10 @@
             console.log("Result from server:", result); // Log the result to the console
 
             // Check if the result element exists before trying to update it
-            const resultElement = document.getElementById('result');
-            if (resultElement) {
+            // const resultElement = document.getElementById('result');
+            if (result) {
                 // resultElement.innerText = 'Result: ' + result;
-                sessionStorage.setItem('uploadResult:', result)
+                sessionStorage.setItem('uploadResult', result);
             }
             window.location.href = 'results.html'; // Redirect after upload is complete
         })
@@ -137,6 +140,7 @@
             console.error('Error:', error);
         });
     }
+    
     
     window.addEventListener('load', startup, false);
 })();

@@ -1,12 +1,13 @@
-from flask import Flask, request, render_template, jsonify
+from flask import Flask, request, render_template
 import base64
 from PIL import Image
 from io import BytesIO
 import os
-from model.model import run_model
+from model.model import Model
 
 app = Flask(__name__, template_folder="./front-end")
 app.config['UPLOAD_FOLDER'] = 'data/input_data'
+model = Model() # Initializing model
 
 @app.route('/')
 def index():
@@ -52,7 +53,7 @@ def upload_file():
     filepath = os.path.join(app.config['UPLOAD_FOLDER'], 'captured_image.png')
     image.save(filepath)
 
-    result = run_model(filepath)  # Run your model on the image
+    result = model.run_model(filepath)  # Run your model on the image
     print(result)
     return result  # Return the result
 
